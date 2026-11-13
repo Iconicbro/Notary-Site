@@ -29,9 +29,7 @@ Search the HTML for `Your Business Name`, `$__`, `[State]`, `[City, State]`, `Co
 
 ## Typography
 
-**IBM Plex Sans** (body) + **IBM Plex Serif** (headings), from Google Fonts. Plex was designed for clarity
-in corporate and financial interfaces, has tabular numerals for pricing, and the serif headings add a
-"documents and seals" feel without looking old-fashioned.
+**Geist** (Google Fonts) for everything — a clean, modern grotesk in the style of premium fintech sites, with tabular numerals for pricing.
 
 ## Security & compliance
 
