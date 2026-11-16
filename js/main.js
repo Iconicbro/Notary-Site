@@ -53,6 +53,26 @@
     });
   });
 
+  // ---------- Flip cards (service front / pricing back) ----------
+  document.querySelectorAll('.flip').forEach(function (card) {
+    var front = card.querySelector('.front');
+    var back = card.querySelector('.back');
+    function set(flipped) {
+      card.classList.toggle('is-flipped', flipped);
+      front.inert = flipped; back.inert = !flipped;
+      front.setAttribute('aria-hidden', String(flipped));
+      back.setAttribute('aria-hidden', String(!flipped));
+    }
+    set(false);
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      if (window.getSelection && String(window.getSelection()).length) return; // let people select text
+      var flipped = !card.classList.contains('is-flipped');
+      set(flipped);
+      if (e.target.closest('.flip-btn')) (flipped ? back : front).querySelector('.flip-btn').focus();
+    });
+  });
+
   // ---------- Request form ----------
   // FORM_ENDPOINT: set to a secure (HTTPS) form-handling endpoint when ready,
   // and add its origin to connect-src / form-action in the CSP meta tag.
