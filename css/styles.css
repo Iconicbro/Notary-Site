@@ -164,6 +164,9 @@ img, svg { display: block; }
 .fees dt small { display: block; font-size: .78rem; opacity: .75; margin-top: 2px; }
 .fees dd { margin: 0; white-space: nowrap; font-weight: 500; font-variant-numeric: tabular-nums; }
 .card-grad .fees div { border-top-color: rgba(255,255,255,.25); }
+.price .price-pre { display: block; margin: 0 0 8px; font-size: .85rem; letter-spacing: 0; }
+.card-grad .price .price-pre { color: rgba(255,255,255,.75); }
+.face.back li { padding: 7px 0; font-size: .88rem; }
 .card .fees-note { font-size: .8rem; color: var(--muted); margin: 14px 0 0; }
 @media (prefers-reduced-motion: reduce) { .flip-inner, .flip { transition: none; } }
 .card-num { font-size: .85rem; color: var(--muted); margin-bottom: auto; padding-bottom: 48px; }
