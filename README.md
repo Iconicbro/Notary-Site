@@ -1,4 +1,4 @@
-# Your Business Name — Website (Draft v1)
+# Express Capital Signings — Website (Draft v1)
 
 Static site for three services: **Notary**, **Loan Signing**, and **LLC Formation**, each on its own tab.
 No build step — plain HTML/CSS/JS, ready for GitHub Pages.
@@ -25,7 +25,7 @@ Then adjust the color tokens at the top of `css/styles.css` to match.
 
 ## Placeholders to fill in
 
-Search the HTML for `Your Business Name`, `$__`, `[State]`, `[City, State]`, `Commission #`, and `(000) 000-0000`.
+Search the HTML for `$__`, `[State]`, `[City, State]`, `Commission #`, and `(000) 000-0000`.
 
 ## Typography
 

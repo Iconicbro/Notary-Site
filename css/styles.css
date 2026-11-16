@@ -292,7 +292,7 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 @media (max-width: 640px) {
   .container { width: calc(100% - 32px); }
   .header-inner { height: 64px; }
-  .brand-name { font-size: 1rem; }
+  .brand-name { font-size: .92rem; letter-spacing: -0.02em; }
   .hero { padding-bottom: 48px; }
   .hero-copy { margin-top: 32px; }
   .services, .principles, .request { padding: 72px 0; }
