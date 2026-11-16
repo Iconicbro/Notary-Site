@@ -132,8 +132,7 @@ img, svg { display: block; }
 
 /* ---------- Cards ---------- */
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 72px; }
-.cards-1 { grid-template-columns: 1fr; }
-.cards-1 .card { min-height: 300px; }
+.cards-1 { grid-template-columns: 1fr; }.cards-1 .card { min-height: 300px; }
 .cards-1 .card p { max-width: 640px; }
 .card {
   position: relative; overflow: hidden; isolation: isolate;
@@ -172,6 +171,11 @@ img, svg { display: block; }
 .face.back li { padding: 7px 0; font-size: .88rem; }
 .card .fees-note { font-size: .8rem; color: var(--muted); margin: 14px 0 0; }
 @media (prefers-reduced-motion: reduce) { .flip-inner, .flip { transition: none; } }
+/* Narrow screens: the shorter face would leave a blank gap, so pin its button to the bottom */
+@media (max-width: 1000px) {
+  .flip .flip-btn { margin-top: auto; }
+  .flip .face > :nth-last-child(2) { margin-bottom: 24px; }
+}
 .card-num { font-size: .85rem; color: var(--muted); margin-bottom: auto; padding-bottom: 48px; }
 .card h4 { font-size: 1.6rem; }
 .card p { color: var(--ink-2); font-size: .95rem; }
