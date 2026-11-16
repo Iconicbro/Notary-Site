@@ -126,9 +126,13 @@ img, svg { display: block; }
 .tab[aria-selected="true"] { background: var(--ink); color: #fff; }
 
 .panel:focus-visible { outline-offset: 8px; border-radius: 8px; }
-.panel-head { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: end; margin-bottom: 48px; }
-.panel-head h3 { font-size: clamp(1.9rem, 3.6vw, 3rem); margin: 0; }
-.panel-head p { color: var(--ink-2); margin-bottom: 20px; }
+/* Section heading, intro and main action live inside each tab's lead card */
+.card .card-head { font-size: clamp(1.8rem, 3.4vw, 2.8rem); margin: 0 0 12px; max-width: 760px; text-wrap: balance; }
+.card .card-intro { font-size: 1.05rem; max-width: 620px; margin: 0 0 auto; padding-bottom: 48px; }
+.card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
+.card-actions .flip-btn { margin-top: 0; }
+.btn-light { background: #fff; color: var(--ink); border-color: #fff; }
+.btn-light:hover { background: rgba(255,255,255,.88); gap: 12px; }
 
 /* ---------- Cards ---------- */
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 72px; }
@@ -173,7 +177,7 @@ img, svg { display: block; }
 @media (prefers-reduced-motion: reduce) { .flip-inner, .flip { transition: none; } }
 /* Narrow screens: the shorter face would leave a blank gap, so pin its button to the bottom */
 @media (max-width: 1000px) {
-  .flip .flip-btn { margin-top: auto; }
+  .flip .face > .flip-btn, .flip .face > .card-actions { margin-top: auto; }
   .flip .face > :nth-last-child(2) { margin-bottom: 24px; }
 }
 .card-num { font-size: .85rem; color: var(--muted); margin-bottom: auto; padding-bottom: 48px; }
@@ -281,8 +285,8 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
   .header-nav a:not(.btn) { display: none; }
-  .hero-copy, .panel-head, .split, .request-inner, .principle-grid, .footer-bottom { grid-template-columns: 1fr; }
-  .hero-copy, .panel-head { gap: 24px; }
+  .hero-copy, .split, .request-inner, .principle-grid, .footer-bottom { grid-template-columns: 1fr; }
+  .hero-copy { gap: 24px; }
   .split { gap: 40px; }
   .cards { grid-template-columns: 1fr; }
   .card { min-height: 0; }

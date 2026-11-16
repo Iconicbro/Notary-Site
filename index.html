@@ -97,25 +97,19 @@
 
         <!-- ============ NOTARY ============ -->
         <div class="panel" role="tabpanel" id="panel-notary" aria-labelledby="tab-notary" tabindex="0">
-          <div class="panel-head">
-            <h3>Get it notarized online, from anywhere.</h3>
-            <div>
-              <p>Meet a Florida-commissioned notary on a secure, encrypted video session from your phone or computer. No travel and no waiting room.</p>
-              <a class="btn btn-dark" href="#request" data-service="notary">Book a notary
-                <svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg>
-              </a>
-            </div>
-          </div>
-
           <!-- Flip cards: front = service, back = pricing. Toggled by js/main.js -->
           <div class="cards cards-1">
             <article class="flip" aria-label="Remote Online Notarization">
               <div class="flip-inner">
                 <div class="card card-grad face front">
-                  <span class="card-num">01</span>
+                  <h3 class="card-head">Get it notarized online, from anywhere.</h3>
+                  <p class="card-intro">Notarize from your phone or computer. No travel and no waiting room.</p>
                   <h4>Remote Online Notarization (RON)</h4>
                   <p>Need a document notarized quickly and securely from anywhere in the world? Our Florida-commissioned online notaries connect with you via a secure, encrypted audio-video platform.</p>
-                  <button class="flip-btn" type="button">See pricing <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8a5 5 0 0 1 9-3M13 8a5 5 0 0 1-9 3M12 2v3H9M4 14v-3h3"/></svg></button>
+                  <div class="card-actions">
+                    <a class="btn btn-light" href="#request" data-service="notary">Book a notary <svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg></a>
+                    <button class="flip-btn" type="button">See pricing <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8a5 5 0 0 1 9-3M13 8a5 5 0 0 1-9 3M12 2v3H9M4 14v-3h3"/></svg></button>
+                  </div>
                 </div>
                 <div class="card card-grad face back">
                   <span class="card-num">Single document / standard RON session</span>
@@ -161,24 +155,18 @@
 
         <!-- ============ LOAN SIGNING ============ -->
         <div class="panel" role="tabpanel" id="panel-loan" aria-labelledby="tab-loan" tabindex="0" hidden>
-          <div class="panel-head">
-            <h3>Closings done right the first time.</h3>
-            <div>
-              <p>Certified loan signing agent for title companies, lenders, and signing services — accurate, on time, and returned clean.</p>
-              <a class="btn btn-dark" href="#request" data-service="loan-signing">Schedule a signing
-                <svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg>
-              </a>
-            </div>
-          </div>
-
           <div class="cards cards-1">
             <article class="flip" aria-label="Remote Loan Signing Packages">
               <div class="flip-inner">
                 <div class="card card-grad face front">
-                  <span class="card-num">01</span>
+                  <h3 class="card-head">Closings done right the first time.</h3>
+                  <p class="card-intro">Certified loan signing agent for title companies, lenders, and signing services — accurate, on time, and returned clean.</p>
                   <h4>Remote Loan Signing Packages</h4>
                   <p>For title companies, lenders, and real estate buyers and sellers requiring full real estate closing execution via Remote Online Notarization.</p>
-                  <button class="flip-btn" type="button">See pricing <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8a5 5 0 0 1 9-3M13 8a5 5 0 0 1-9 3M12 2v3H9M4 14v-3h3"/></svg></button>
+                  <div class="card-actions">
+                    <a class="btn btn-light" href="#request" data-service="loan-signing">Schedule a signing <svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg></a>
+                    <button class="flip-btn" type="button">See pricing <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8a5 5 0 0 1 9-3M13 8a5 5 0 0 1-9 3M12 2v3H9M4 14v-3h3"/></svg></button>
+                  </div>
                 </div>
                 <div class="card card-grad face back">
                   <span class="card-num">Standard remote loan signing package</span>
@@ -223,21 +211,14 @@
 
         <!-- ============ LLC ============ -->
         <div class="panel" role="tabpanel" id="panel-llc" aria-labelledby="tab-llc" tabindex="0" hidden>
-          <div class="panel-head">
-            <h3>Your business, officially open.</h3>
-            <div>
-              <p>We prepare and file the paperwork to register your limited liability company with the state — so you can focus on opening day.</p>
-              <a class="btn btn-dark" href="#request" data-service="llc-formation">Start my LLC
-                <svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg>
-              </a>
-            </div>
-          </div>
-
           <div class="cards cards-1">
             <article class="card card-grad">
+              <h3 class="card-head">Your business, officially open.</h3>
+              <p class="card-intro">We prepare and file the paperwork to register your limited liability company with the state — so you can focus on opening day.</p>
               <p class="tier">Business Ready</p>
               <p class="price">$__<span>+ state fee</span></p>
               <ul><li>Name availability check</li><li>Articles of Organization filed</li><li>Registered agent guidance</li><li>EIN application with the IRS</li><li>Operating agreement template</li><li>Notarization included</li></ul>
+              <div class="card-actions"><a class="btn btn-light" href="#request" data-service="llc-formation">Start my LLC <svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg></a></div>
             </article>
           </div>
 
