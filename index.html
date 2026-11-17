@@ -31,15 +31,21 @@
         <img src="assets/logo-placeholder.svg" alt="" width="32" height="32" class="brand-logo">
         <span class="brand-name">Express Capital Signings</span>
       </a>
-      <nav class="header-nav" aria-label="Primary">
-        <a href="#notary">Notary</a>
-        <a href="#capital-funding">Capital Funding</a>
-        <a href="#llc-formation">LLC Formation</a>
-        <a href="#how-we-work">How we work</a>
-        <a class="btn btn-dark btn-small" href="#request">Book now
+      <div class="header-actions">
+        <a class="btn btn-small header-book" href="#request">Book now
           <svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg>
         </a>
-      </nav>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path class="bar1" d="M4 7h16"/><path class="bar2" d="M4 12h16"/><path class="bar3" d="M4 17h16"/></svg>
+        </button>
+        <nav class="site-menu" id="site-menu" aria-label="Primary" hidden>
+          <a href="#notary">Notary</a>
+          <a href="#capital-funding">Capital Funding</a>
+          <a href="#llc-formation">LLC Formation</a>
+          <a href="#how-we-work">How we work</a>
+          <a href="#request">Book now</a>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -49,9 +55,6 @@
       <div class="container">
         <div class="hero-visual hero-bleed" aria-hidden="true">
           <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span>
-          <div class="hero-seal">
-            <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"/><circle cx="60" cy="60" r="40"/><path d="M42 64l12 12 26-30"/></svg>
-          </div>
         </div>
         <div class="hero-copy">
           <h1 id="hero-title">Signed, sealed, and set up — without the hassle.</h1>
@@ -91,7 +94,7 @@
 
         <div class="tabs" role="tablist" aria-label="Our services">
           <button class="tab" role="tab" id="tab-notary" aria-controls="panel-notary" aria-selected="true" data-slug="notary">Notary</button>
-          <button class="tab" role="tab" id="tab-loan" aria-controls="panel-loan" aria-selected="false" tabindex="-1" data-slug="capital-funding">Capital Funding</button>
+          <button class="tab" role="tab" id="tab-loan" aria-controls="panel-loan" aria-selected="false" tabindex="-1" data-slug="capital-funding" data-service="loan-signing">Capital Funding</button>
           <button class="tab" role="tab" id="tab-llc" aria-controls="panel-llc" aria-selected="false" tabindex="-1" data-slug="llc-formation">LLC Formation</button>
         </div>
 

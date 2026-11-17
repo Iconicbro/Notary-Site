@@ -16,7 +16,7 @@
       document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
     });
     if (opts.focus) tab.focus();
-    if (serviceSelect) serviceSelect.value = tab.dataset.slug;
+    if (serviceSelect) serviceSelect.value = tab.dataset.service || tab.dataset.slug;
     if (opts.updateHash !== false && history.replaceState) {
       history.replaceState(null, '', '#' + tab.dataset.slug);
     }
@@ -135,4 +135,39 @@
 
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
+})();
+
+// ---------- Header: hamburger menu + solid background after the hero ----------
+(function () {
+  'use strict';
+  var header = document.querySelector('.site-header');
+  var toggle = document.querySelector('.menu-toggle');
+  var menu = document.getElementById('site-menu');
+  var heroVisual = document.querySelector('.hero-visual');
+  if (!header || !toggle || !menu) return;
+
+  function setOpen(open, opts) {
+    menu.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (open) { var first = menu.querySelector('a'); if (first) first.focus(); }
+    else if (opts && opts.returnFocus) toggle.focus();
+  }
+
+  toggle.addEventListener('click', function () { setOpen(menu.hidden); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !menu.hidden) setOpen(false, { returnFocus: true });
+  });
+  document.addEventListener('click', function (e) {
+    if (!menu.hidden && !e.target.closest('.header-actions')) setOpen(false);
+  });
+
+  function onScroll() {
+    var limit = heroVisual ? heroVisual.offsetHeight - header.offsetHeight : 10;
+    header.classList.toggle('is-scrolled', window.scrollY > limit);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
 })();
