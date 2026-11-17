@@ -1,6 +1,6 @@
 # Express Capital Signings — Website (Draft v1)
 
-Static site for three services: **Notary**, **Loan Signing**, and **LLC Formation**, each on its own tab.
+Static site for three services: **Notary**, **Capital Funding**, and **LLC Formation**, each on its own tab.
 No build step — plain HTML/CSS/JS, ready for GitHub Pages.
 
 ## Structure
@@ -15,7 +15,7 @@ assets/               logo-placeholder.svg (swap for the real logo), logo-mark.s
 docs/ron-api-research.md   Remote online notarization API options
 ```
 
-Deep links: `/#notary`, `/#loan-signing`, `/#llc-formation`.
+Deep links: `/#notary`, `/#capital-funding`, `/#llc-formation`.
 
 ## Swapping in the logo
 
