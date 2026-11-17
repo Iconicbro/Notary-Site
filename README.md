@@ -10,7 +10,7 @@ index.html            Home page with the three service tabs + request form
 privacy.html          Draft privacy notice (needs review before launch)
 css/styles.css        All styles; brand colors are tokens at the top
 js/main.js            Tabs, deep links, form validation
-assets/               logo-placeholder.svg (swap for the real logo), logo-mark.svg (favicon)
+assets/               logo-mark.svg (favicon)
 .well-known/security.txt
 docs/ron-api-research.md   Remote online notarization API options
 ```
@@ -19,7 +19,7 @@ Deep links: `/#notary`, `/#capital-funding`, `/#llc-formation`.
 
 ## Swapping in the logo
 
-Replace `assets/logo-placeholder.svg` (header) and `assets/logo-mark.svg` (browser tab icon) with the supplied files,
+Replace `assets/logo-mark.svg` (browser tab icon) with the supplied files,
 keeping the same names — or update the `src`/`href` in `index.html` and `privacy.html`.
 Then adjust the color tokens at the top of `css/styles.css` to match.
 
