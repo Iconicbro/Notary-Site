@@ -116,7 +116,21 @@ html { scroll-padding-top: 80px; }
 .hero { padding: 0 0 72px; overflow-x: clip; }
 /* Full-bleed: the hero band breaks out of the container to span the viewport */
 .hero-bleed { width: 100vw; margin-inline: calc(50% - 50vw); }
-.hero-visual { height: calc(clamp(260px, 42vh, 440px) + 72px); border-radius: 0; background: #12295a; }
+.hero-visual {
+  height: calc(clamp(260px, 42vh, 440px) + 72px); border-radius: 0;
+  background: linear-gradient(115deg, var(--g1) 0%, #12295a 25%, var(--g2) 45%, var(--g3) 60%, var(--g2) 78%, var(--g1) 100%);
+  background-size: 300% 100%; animation: gradient-pan 22s ease-in-out infinite alternate;
+}
+@keyframes gradient-pan { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+/* Flowing wave layers: each SVG holds two wave periods and slides left by half its width, so it loops seamlessly */
+.waves { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.wave { position: absolute; left: 0; width: 200%; animation: wave-x 26s linear infinite, wave-y 9s ease-in-out infinite alternate; }
+.wave path { fill: currentColor; }
+.w1 { bottom: 14%; height: 72%; color: rgba(53,102,176,.45); filter: blur(10px); mix-blend-mode: screen; }
+.w2 { bottom: 2%; height: 58%; color: rgba(134,169,222,.30); filter: blur(4px); mix-blend-mode: screen; animation-duration: 18s, 7s; animation-direction: reverse, alternate; }
+.w3 { bottom: -10%; height: 46%; color: rgba(8,22,51,.55); filter: blur(2px); animation-duration: 34s, 11s; }
+@keyframes wave-x { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes wave-y { from { translate: 0 0; } to { translate: 0 8%; } }
 .hero-copy { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: end; margin-top: 48px; }
 .hero h1 { font-size: clamp(2.4rem, 5.6vw, 4.6rem); margin: 0; }
 .hero-side p { color: var(--ink-2); font-size: 1.05rem; }
