@@ -140,6 +140,7 @@ img, svg { display: block; }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 72px; }
 .cards-1 { grid-template-columns: 1fr; }.cards-1 .card { min-height: 300px; }
 .cards-1 .card p { max-width: 640px; }
+.cards-2 { grid-template-columns: repeat(2, 1fr); }
 .card {
   position: relative; overflow: hidden; isolation: isolate;
   background: var(--surface); border-radius: var(--r); padding: 32px;
