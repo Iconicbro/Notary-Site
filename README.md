@@ -29,7 +29,7 @@ Search the HTML for `$__`, `[State]`, `[City, State]`, `Commission #`, and `(000
 
 ## Typography
 
-**Geist** (Google Fonts) for everything — a clean, modern grotesk in the style of premium fintech sites, with tabular numerals for pricing.
+**Manrope** (Google Fonts) for headings, subheadings and body copy, with tabular numerals for pricing.
 
 ## Security & compliance
 

@@ -21,7 +21,7 @@
   --r-sm: 12px;
   --r: 20px;
   --r-lg: 28px;
-  --font: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
